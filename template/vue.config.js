@@ -26,6 +26,10 @@ module.exports = {
       '/game/mini/static': {
         target: proxyTarget,
         changeOrigin: true
+      },
+      '/game/commonjs/': {
+        target: proxyTarget,
+        changeOrigin: true
       }
     }
   }
