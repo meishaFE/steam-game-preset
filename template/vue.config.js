@@ -1,3 +1,4 @@
+// https://cli.vuejs.org/zh/config/#vue-config-js
 const CompressionPlugin = require('compression-webpack-plugin');
 const proxyTarget = 'https://test-steam.meishakeji.com';
 module.exports = {
@@ -28,6 +29,10 @@ module.exports = {
         changeOrigin: true
       },
       '/game/commonjs/': {
+        target: proxyTarget,
+        changeOrigin: true
+      },
+      '/game/coin/': {
         target: proxyTarget,
         changeOrigin: true
       }

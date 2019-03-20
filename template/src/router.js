@@ -4,8 +4,6 @@ import { GAME_FRONT_ID } from './config';
 
 Vue.use(Router);
 
-const earnRouterConfig = window.steamMiniGame.miniConfig;
-
 export default new Router({
   mode: 'history',
   base: `/game/${GAME_FRONT_ID}`,
@@ -14,11 +12,6 @@ export default new Router({
       path: '/',
       name: 'Main',
       component: () => import('./views/main.vue')
-    },
-    {
-      path: '/earn',
-      component: () => import('./views/earn.vue'),
-      children: [...earnRouterConfig]
     }
   ]
 });

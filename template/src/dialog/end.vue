@@ -21,7 +21,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss" scoped>
 .game__dialog--gameend {
   display: inline-block;
   vertical-align: middle;

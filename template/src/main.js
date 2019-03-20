@@ -2,7 +2,6 @@ import MeishaWatch from 'meisha-fe-watch';
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 
-// import katex for mathematical formula
 import katex from 'katex/dist/katex.min.js';
 import 'katex/dist/katex.min.css';
 

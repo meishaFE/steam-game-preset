@@ -1,6 +1,4 @@
 export default {
-  // gameName add by yourself
-
   // App
   加载中: 'Loading',
 
@@ -20,7 +18,5 @@ export default {
   查看全部排名: 'Full Rankings',
   我的挑战记录: 'My Challenge Record',
   暂时还未有人上榜: 'No records found.',
-  快去争做榜单第一人吧: '',
-  '（我）': '(Me)',
-  '(我)': '(Me)'
+  快去争做榜单第一人吧: ''
 };
