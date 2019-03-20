@@ -11,8 +11,7 @@ const state = Object.assign(
     playId: '', // 线路计算正确后才会有的游戏id
     isCanToggleLang: false, // 是否可以切换语言
     gameOver: false // 游戏是否结束
-  },
-  steamgame.miniModule.state
+  }
 );
 
 const mutations = Object.assign(
@@ -38,8 +37,7 @@ const mutations = Object.assign(
     SETGAMEOVER(state, gameOver) {
       state.gameOver = gameOver;
     }
-  },
-  steamgame.miniModule.mutations
+  }
 );
 
 const actions = Object.assign(
@@ -129,8 +127,7 @@ const actions = Object.assign(
           () => {}
         );
     }
-  },
-  steamgame.miniModule.actions
+  }
 );
 
 const getters = Object.assign(
@@ -156,8 +153,7 @@ const getters = Object.assign(
     gameOver(state) {
       return state.gameOver;
     }
-  },
-  steamgame.miniModule.getters
+  }
 );
 
 Vue.use(Vuex);

@@ -19,7 +19,7 @@ export default {
   name: 'GameDialogGuide'
 };
 </script>
-<style lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss" scoped>
 .game__dialog--guide {
   display: inline-block;
   vertical-align: middle;
