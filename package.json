@@ -4,7 +4,8 @@
   "description": "steam-game vue-cli preset",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ext .js,.vue template"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,14 @@
   },
   "homepage": "https://github.com/JxJayden/steam-game-preset#readme",
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.2",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4"
@@ -28,8 +36,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,md,css}": [
-      "prettier --trailing-comma none --single-quote --write",
+    "*.{js,css}": [
+      "prettier --write",
+      "eslint",
       "git add"
     ]
   }

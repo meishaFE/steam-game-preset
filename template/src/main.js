@@ -2,9 +2,6 @@ import MeishaWatch from 'meisha-fe-watch';
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
 
-import katex from 'katex/dist/katex.min.js';
-import 'katex/dist/katex.min.css';
-
 import router from './router';
 import store from './store';
 
@@ -47,7 +44,7 @@ Vue.use(MeishaWatch.useVue());
 addFilters(Vue, filters);
 
 // set window const
-setObjectConst(window, { API, katex });
+setObjectConst(window, { API });
 
 Vue.config.productionTip = false;
 

@@ -45,7 +45,7 @@ $height_of_game__header: 0.54rem;
   background-color: rgba(81, 17, 232, 1);
   &__back {
     cursor: pointer;
-    margin-left: .3rem;
+    margin-left: 0.3rem;
     img {
       width: 0.08rem;
       height: 0.16rem;
