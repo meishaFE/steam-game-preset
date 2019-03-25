@@ -23,8 +23,11 @@ export default {
       size: {
         type: String,
         default: 'medium'
-      },
-      disabled: Boolean
+      },    
+      disabled: {
+        type: Boolean,
+        default: false
+    }
   },
   data() {
     return {};
@@ -66,7 +69,6 @@ export default {
   box-shadow: inset -4px -4px 0 0 rgba(224,141,32,0.50), inset 4px 4px 0 0 rgba(255,255,255,0.60);
   border-radius: .04rem;
   cursor: pointer;
-  opacity: 0.6;
   span {
     font-size: .2rem;
     color: #000000;
