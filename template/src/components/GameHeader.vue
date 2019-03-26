@@ -15,6 +15,7 @@
   </header>
 </template>
 <script>
+import { GAME_NAME } from '@/config';
 export default {
   name: 'GameHeader',
   props: {
@@ -28,6 +29,7 @@ export default {
   },
   methods: {
     toEarn() {
+      localStorage.setItem('bigGameName', GAME_NAME);
       window.location.href = '/game/coin/';
     }
   }

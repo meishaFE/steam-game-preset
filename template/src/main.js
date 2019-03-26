@@ -9,7 +9,7 @@ import {
   API,
   ENV,
   GAME_SERVER_ID,
-  GAME_FRONT_ID,
+  GAME_NAME,
   IS_GAME_HAS_EN_VERSION,
   STATIC_URL
 } from '@/config';
@@ -72,7 +72,7 @@ $http
             if (res.data) {
               const lang = steamgame.setGameLangToLocal(
                 res.data,
-                GAME_FRONT_ID,
+                GAME_NAME,
                 GAME_SERVER_ID,
                 IS_GAME_HAS_EN_VERSION
               );
