@@ -3,7 +3,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const proxyTarget = 'https://test-steam.meishakeji.com';
 module.exports = {
   runtimeCompiler: true,
-  publicPath: '/game/',
+  publicPath: '/game/<%= projectName %>/',
   outputDir: '<%= projectName %>',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {

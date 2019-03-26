@@ -1,12 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import { GAME_FRONT_ID } from './config';
+import { GAME_NAME } from './config';
 
 Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  base: `/game/${GAME_FRONT_ID}`,
+  base: `/game/${GAME_NAME}`,
   routes: [
     {
       path: '/',

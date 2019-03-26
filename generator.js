@@ -37,7 +37,6 @@ module.exports = (api, options, rootOptions) => {
     projectName: rootOptions.projectName,
     gameName: options.gameName,
     gameServerId: options.gameServerId,
-    gameFrontId: options.gameFrontId,
     isGameHasEnVersion: options.isGameHasEnVersion
   });
 };
