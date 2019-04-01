@@ -8,9 +8,9 @@ const API = {
  */
 export default (function addBaseURL(obj, prefix) {
   for (let [key, value] of Object.entries(obj)) {
-    typeof value === 'object'
-      ? addBaseURL(value, prefix)
-      : (obj[key] = prefix + value);
+    typeof value === 'string'
+      ? (obj[key] = prefix + value)
+      : addBaseURL(value, prefix);
   }
   return obj;
 })(API, BASE_URL + '/api/v1/');
