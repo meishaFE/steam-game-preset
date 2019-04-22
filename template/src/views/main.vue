@@ -1,11 +1,10 @@
 <template>
   <div class="game__main">
-    <GameGuideDlg v-if="guideDlgShow" @cancel="$emit('update:guideDlgShow', false)"/>
+    <div style="font-size: 20px;color: #fff;">主页面</div>
   </div>
 </template>
 
 <script>
-import GameGuideDlg from '@/dialog/guide';
 export default {
   name: 'GameMain',
   props: {
@@ -13,9 +12,6 @@ export default {
       type: Boolean,
       default: false
     }
-  },
-  components: {
-    GameGuideDlg
   }
 };
 </script>

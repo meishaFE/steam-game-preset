@@ -4,7 +4,8 @@ module.exports = (api, options, rootOptions) => {
     dependencies: {
       'babel-polyfill': '^6.26.0',
       'meisha-fe-watch': '^1.0.2',
-      'vue-i18n': '^8.9.0'
+      'vue-i18n': '^8.9.0',
+      'steam-game-ui': '^0.1.4'
     },
     devDependencies: {
       '@vue/eslint-config-standard': '^4.0.0',

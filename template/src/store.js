@@ -2,7 +2,12 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import { GAME_SERVER_ID } from './config';
 
+/**
+ * gamePageState参数说明：
+ * 0-游戏主页面 1-游戏已结束 2-退出游戏 4-游戏指南 8-道具箱
+ */
 const state = Object.assign({
+  gamePageState: 0,
   userInfo: {},
   sessionInfo: {},
   gameInfo: {},
@@ -13,6 +18,9 @@ const state = Object.assign({
 });
 
 const mutations = Object.assign({
+  SETGAMEPAGESTATE(state, gamePageState) {
+    state.gamePageState = gamePageState;
+  },
   SETUSERINFO(state, userInfo) {
     state.userInfo = userInfo;
   },
@@ -125,6 +133,9 @@ const actions = Object.assign({
 });
 
 const getters = Object.assign({
+  gamePageState(state) {
+    return state.gamePageState;
+  },
   gameList(state) {
     return state.gameList;
   },

@@ -1,25 +1,25 @@
 <template>
-  <div class="dialog-container">
+  <div class="dialog-container dialog-container--fixed">
     <div class="game__dialog--guide">
-      <h2>{{$t('游戏指南')}}</h2>
+      <h2>{{ $t('游戏指南') }}</h2>
       <div class="desc-container">
-        <!-- add img src attr by yourself -->
-        <!-- <img v-if="$i18n.locale === 'en'"
-             src="" />
-        <img v-else
-             src="" /> -->
+        <img src="/game/static/img/icon_game-guide@2x.png" />
       </div>
-      <button class="button--default"
-              @click="$emit('cancel')">{{$t('我已阅读')}}</button>
+      <st-button @click="closeGuide">{{ $t('我已阅读') }}</st-button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'GameDialogGuide'
+  name: 'GameDialogGuide',
+  methods: {
+    closeGuide() {
+      this.$store.commit('SETGAMEPAGESTATE', 0);
+    }
+  }
 };
 </script>
-<style lang="scss" rel="stylesheet/scss" scoped>
+<style lang="scss" rel="stylesheet/scss">
 .game__dialog--guide {
   display: inline-block;
   vertical-align: middle;

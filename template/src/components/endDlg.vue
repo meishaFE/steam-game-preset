@@ -1,13 +1,13 @@
 <template>
   <div class="dialog-container dialog-container--maxtop">
     <div class="game__dialog--gameend">
-      <img src="~@/assets/img/pic_games-over.png">
+      <img src="~@/assets/img/pic_games-over.png" />
       <h2>
-        {{$t('本次游戏结束了')}}
-        <br>
-        {{$t('让我们下次再背上行囊出发吧！')}}
+        {{ $t('本次游戏结束了') }}
+        <br />
+        {{ $t('让我们下次再背上行囊出发吧！') }}
       </h2>
-      <button class="button--default" @click="goodbye">{{$t('下次再来')}}</button>
+      <st-button @click="goodbye">{{ $t('下次再来') }}</st-button>
     </div>
   </div>
 </template>
