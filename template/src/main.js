@@ -1,6 +1,7 @@
 import MeishaWatch from 'meisha-fe-watch';
 import Vue from 'vue';
 import VueI18n from 'vue-i18n';
+import SteamUI from 'steam-game-ui';
 
 import router from './router';
 import store from './store';
@@ -15,7 +16,7 @@ import {
 } from '@/config';
 
 import filters from '@/filters';
-import setObjectConst from '@/utils/setObjectConst';
+import { setObjectConst } from '@/utils';
 import messages from '@/lang';
 import App from '@/App.vue';
 
@@ -30,12 +31,13 @@ const i18n = new VueI18n({
   messages
 });
 
+Vue.use(SteamUI);
 // init meisha-watch
 MeishaWatch.init({
-  isReport: ENV.prod,
-  reportURL: '//log-server-web.meishakeji.com/log/js',
-  projectId: 'steamfe',
-  partitionId: 'steamGame'
+  isReport: ENV.prod, // 是否向后端提交MeishaWatch收集信息，默认为true，可自行检测当前环境，在开发、测试、预发布环境关闭，如：isReport:
+  reportURL: '//pre-monitor.meishakeji.com/v1/fex/post_log', // 向后端提交MeishaWatch收集信息的URL(必填，否则无法提交)
+  projectId: 'steam', // 日志系统设置的项目英文名（必填，否则无法提交）
+  partitionId: 'biggame' // 日志系统设置的分区英文名称（必填，否则无法提交)
 });
 
 Vue.use(MeishaWatch.useVue());

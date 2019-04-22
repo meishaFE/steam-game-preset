@@ -20,7 +20,6 @@ yarn serve
 1. 用于项目的发布路径`/game/3dinosaur/`，路由如下 `https://test-steam.meishakeji.com/game/3dinosaur/`
 2. 用于打包发布的文件夹命名，打包出来的文件夹名称为 `3dinosaur`
 3. localStorage内游戏语言的标志位，`{"3dinosaur":"cn", "bridge":"en"}`，根据该名字来定义游戏的语言类型
-4. localStorage内的大游戏名称，`bigGameName: 3dinosaur`，从大游戏跳去赚金币小游戏的时候会在localStorage内存储该字段，赚金币小游戏的回跳的时候会根据该字段拼成大游戏地址，url同1
 
 ### GAME_SERVER_ID: 
 参数解析：请输入后端定义的游戏 ID
@@ -29,6 +28,15 @@ yarn serve
 
 ### IS_GAME_HAS_EN_VERSION
 参数解析：该游戏是否有英文版本，默认否
+
+## 本地开发
+```shell
+# ./steam-game-preset 应当是一个包含 preset.json 的文件夹
+vue create --preset ./steam-game-preset my-project
+
+# 或者，直接使用当前工作目录下的 json 文件：
+vue create --preset preset.json my-project
+```
 
 
 

@@ -1,21 +1,23 @@
 <template>
   <div class="dialog-container dialog-container--maxtop">
     <div class="game__dialog--gameend">
-      <h2>真的要退出游戏了吗？</h2>
-      <p>（游戏中途退出，视为放弃本次挑战）</p>
-      <steam-button class="quitbtn" type="primary" @click="$emit('gameQuit')">狠心退出</steam-button>
-      <steam-button class="continuebtn" type="default" @click="$emit('gameContinue')">继续游戏</steam-button>
+      <h2>{{ $t('真的要退出游戏了吗？') }}</h2>
+      <p>{{ $t('（游戏中途退出，视为放弃本次挑战）') }}</p>
+      <st-button class="quitbtn" type="primary" @click="gameQuit">{{$t('狠心退出')}}</st-button>
+      <st-button class="continuebtn"  @click="gameContinue">{{ $t('继续游戏') }}</st-button>
     </div>
   </div>
 </template>
 <script>
-import SteamButton from '@/components//button';
 export default {
   name: 'GameDialogGameQuit',
   methods: {
-  },
-  components: {
-    SteamButton
+    gameQuit() {
+      window.location.href = '/student/gamecenter';
+    },
+    gameContinue() {
+      this.$store.commit('SETGAMEPAGESTATE', 0);
+    }
   }
 };
 </script>
@@ -32,17 +34,17 @@ export default {
     margin-top: 1.79rem;
   }
   p {
-    font-size: .14rem;
-    color: rgba(255,255,255,0.80);
-    margin-top: .1rem;
-    margin-bottom: .3rem;
+    font-size: 0.14rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 0.1rem;
+    margin-bottom: 0.3rem;
   }
 }
 .quitbtn {
   display: inline-block;
 }
 .continuebtn {
-  margin-left: .2rem;
+  margin-left: 0.2rem;
   display: inline-block;
 }
 </style>

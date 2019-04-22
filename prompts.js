@@ -15,6 +15,6 @@ module.exports = [
     name: 'isGameHasEnVersion',
     message: '该游戏是否有英文版本？',
     type: 'confirm',
-    default: false
+    default: true
   }
 ];

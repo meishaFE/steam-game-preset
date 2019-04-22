@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <index v-show="ready"/>
+    <Layout v-show="ready" />
     <div class="loading" v-show="!ready">
-      <i/>
-      <h4>{{$t('加载中')}}</h4>
+      <i />
+      <h4>{{ $t('加载中') }}</h4>
     </div>
   </div>
 </template>
 
 <script>
-import Index from './views/index.vue';
+import Layout from './views/Layout.vue';
 const preLoadImg = steamgame.preLoadImg;
 export default {
   name: 'GameApp',
@@ -24,14 +24,13 @@ export default {
     });
   },
   components: {
-    Index
+    Layout
   }
 };
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
 @import './assets/scss/reset';
-@import './assets/scss/button';
 @import './assets/scss/loading';
 @import './assets/scss/dialog';
 @import './assets/scss/helpers';
