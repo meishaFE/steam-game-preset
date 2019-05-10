@@ -5,6 +5,8 @@ module.exports = {
   runtimeCompiler: true,
   publicPath: '/game/<%= projectName %>/',
   outputDir: '<%= projectName %>',
+  productionSourceMap: false,
+  lintOnSave: 'error',
   configureWebpack: config => {
     if (process.env.NODE_ENV === 'production') {
       return {
