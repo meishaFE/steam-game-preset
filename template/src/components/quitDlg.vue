@@ -25,7 +25,7 @@ export default {
 .game__dialog--gameend {
   display: inline-block;
   vertical-align: middle;
-  background: url('~@/assets/img/pic_getout@2x.png') center/100% no-repeat;
+  background: url('~/@assets/img/pic_getout@2x.png') center/100% no-repeat;
   width: 4.54rem;
   height: 3.65rem;
   h2 {

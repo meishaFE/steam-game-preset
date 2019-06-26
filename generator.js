@@ -1,6 +1,9 @@
 module.exports = (api, options, rootOptions) => {
   // 修改 `package.json` 里的字段
   api.extendPackage({
+    scripts: {
+      analyz: 'vue-cli-service build --mode analyz'
+    },
     dependencies: {
       'babel-polyfill': '^6.26.0',
       'meisha-fe-watch': '^1.0.2',
@@ -15,6 +18,8 @@ module.exports = (api, options, rootOptions) => {
       'eslint-plugin-promise': '^4.0.1',
       'eslint-plugin-standard': '^4.0.0',
       'compression-webpack-plugin': '^2.0.0',
+      'webpack-bundle-analyzer': '^3.3.2',
+      'image-webpack-loader': '^5.0.0',
       husky: '^1.3.1',
       'lint-staged': '^8.1.5',
       prettier: '^1.16.4'

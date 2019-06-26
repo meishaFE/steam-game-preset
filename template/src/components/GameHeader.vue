@@ -2,13 +2,13 @@
   <header class="header">
     <div class="header__left" @click="$emit('back')">
       <div class="header__back">
-        <img src="~@/assets/img/icon_back.png" />
+        <img src="@assets/img/icon_back.png" />
         <span>{{ $t('退出游戏') }}</span>
       </div>
     </div>
     <div class="header__right">
       <div class="header__money">
-        <img src="~@/assets/img/icon_money@2x.png" />
+        <img src="@assets/img/icon_money@2x.png" />
         <span>{{ gameInfo.coin || 0 }}</span>
       </div>
       <div class="select-lang" v-show="isCanToggleLang">
@@ -25,15 +25,15 @@
         </ul>
       </div>
       <div class="header__guide" @click="guide">
-        <img src="~@/assets/img/icon_game-guide@2x.png" />
+        <img src="@assets/img/icon_game-guide@2x.png" />
         <span>{{ $t('游戏指南') }}</span>
       </div>
       <div class="header__earn" @click="toEarn">
-        <img src="~@/assets/img/icon_earn-money.png" />
+        <img src="@assets/img/icon_earn-money.png" />
         <span>{{ $t('赚金币') }}</span>
       </div>
       <div class="header__prop" @click="toOpenProp">
-        <img src="~@/assets/img/icon_shop@2x.png" />
+        <img src="@assets/img/icon_shop@2x.png" />
         <span>{{ $t('道具箱') }}</span>
       </div>
     </div>
@@ -171,7 +171,7 @@ $height_of_game__header: 0.54rem;
       display: inline-block;
       position: absolute;
       right: 0;
-      background: url('~@/assets/img/icon_change-language.png') center/100%
+      background: url('~/@assets/img/icon_change-language.png') center/100%
         no-repeat;
     }
   }

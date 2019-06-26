@@ -1,7 +1,7 @@
 <template>
   <div class="dialog-container dialog-container--maxtop">
     <div class="game__dialog--gameend">
-      <img src="~@/assets/img/pic_games-over.png" />
+      <img src="@assets/img/pic_games-over.png" />
       <h2>
         {{ $t('本次游戏结束了') }}
         <br />

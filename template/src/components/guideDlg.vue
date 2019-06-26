@@ -3,7 +3,7 @@
     <div class="game__dialog--guide">
       <h2>{{ $t('游戏指南') }}</h2>
       <div class="desc-container">
-        <img src="/game/static/img/icon_game-guide@2x.png" />
+        <img src="@assets/img/icon_game-guide@2x.png" />
       </div>
       <st-button @click="closeGuide">{{ $t('我已阅读') }}</st-button>
     </div>
@@ -19,7 +19,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss" scoped>
 .game__dialog--guide {
   display: inline-block;
   vertical-align: middle;
