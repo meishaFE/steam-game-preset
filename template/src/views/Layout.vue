@@ -179,7 +179,7 @@ export default {
         display: inline-block;
         position: absolute;
         right: 0;
-        background: url('~@/assets/img/icon_change-language.png') center/100%
+        background: url('~/@assets/img/icon_change-language.png') center/100%
           no-repeat;
       }
     }
