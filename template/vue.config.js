@@ -20,8 +20,7 @@ module.exports = {
         mozjpeg: { progressive: true, quality: 65 },
         optipng: { enabled: false },
         pngquant: { quality: '65-90', speed: 4 },
-        gifsicle: { interlaced: false },
-        webp: { quality: 75 }
+        gifsicle: { interlaced: false }
       });
     process.env.IS_ANALYZ &&
       config.plugin('webpack-report').use(BundleAnalyzerPlugin);
