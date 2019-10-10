@@ -9,11 +9,13 @@
       type="image/png"
       href="/game/static/favicon.ico"
     />
-    <title>Steam Game</title>
+    <title>Newton Game</title>
   </head>
 
   <body>
-    <script src="/game/commonjs/index.js"></script>
+    <!-- <script src="/game/commonjs/index.js"></script> -->
+    <script src="//test-newton.meishakeji.com/game/commonjs/index.js"></script>
+    <!-- 发正式或预发布前得切到/game/commonjs/index.js -->
     <script>
       (function() {
         function resize() {
@@ -21,7 +23,6 @@
           html.style.fontSize = (100 * html.clientWidth) / 1440 + 'px';
           document.body.style.height = html.clientHeight + 'px';
         }
-
         window.addEventListener('resize', resize, false);
         resize();
       })();

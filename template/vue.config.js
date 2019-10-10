@@ -1,6 +1,6 @@
 // https://cli.vuejs.org/zh/config/#vue-config-js
 const CompressionPlugin = require('compression-webpack-plugin');
-const proxyTarget = 'https://test-steam.meishakeji.com';
+const proxyTarget = 'https://test-newton.meishakeji.com';
 module.exports = {
   runtimeCompiler: true,
   publicPath: '/game/',
