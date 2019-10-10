@@ -13,7 +13,7 @@ export const ENV = {
 export const STATIC_URL = 'https://cdn.meishakeji.com/';
 
 // AJAX接口请求地址
-export const BASE_URL = ENV.local ? '//dev-newton.meishakeji.com' : '';
+export const BASE_URL = ENV.local ? '//dev-steam.meishakeji.com' : '';
 
 // WebSocket链接地址·
 export const WS_URL = 'wss://ws.meishakeji.com:9055';
