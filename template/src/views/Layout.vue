@@ -1,39 +1,43 @@
 <template>
   <div class="game">
-    <game-header
-      :back-title="backTitle"
-      @back="back"
-    />
+    <game-header :back-title="backTitle" @back="back" />
     <div class="game__content">
       <router-view />
     </div>
-    <game-end-dlg v-if="gameOver"/>
+    <game-end-dlg v-if="gamePageState & 1" />
+    <game-quit-dlg v-if="gamePageState & 2"></game-quit-dlg>
+    <game-guide-dlg v-if="gamePageState & 4"></game-guide-dlg>
   </div>
 </template>
 <script>
 import { mapGetters } from 'vuex';
-import GameHeader from '@/components/GameHeader';
-import GameEndDlg from '@/dialog/end';
+import GameHeader from '@/components/gameHeader';
+import GameEndDlg from '@/components/endDlg';
+import GameGuideDlg from '@/components/guideDlg';
+import GameQuitDlg from '@/components/quitDlg';
 
 export default {
   name: 'Game',
   data() {
     return {
-      backTitle: '返回',
-      gameOver: false
+      backTitle: '返回'
     };
   },
   computed: {
-    ...mapGetters([])
+    ...mapGetters([
+      'gamePageState'
+    ])
   },
   methods: {
     back() {
-      alert('确定要退出游戏?');
+      this.$store.commit('SETGAMEPAGESTATE', 2);
     }
   },
   components: {
     GameEndDlg,
-    GameHeader
+    GameHeader,
+    GameGuideDlg,
+    GameQuitDlg
   }
 };
 </script>
@@ -48,7 +52,6 @@ export default {
     overflow: auto;
     text-align: center;
     font-size: 0;
-    padding-top: 0.1rem;
   }
   &__bar {
     position: absolute;
@@ -152,7 +155,7 @@ export default {
       height: 0.5rem;
     }
   }
-    .select-lang {
+  .select-lang {
     width: 1.18rem;
     height: 0.34rem;
     margin: 0 0.3rem;
@@ -176,7 +179,8 @@ export default {
         display: inline-block;
         position: absolute;
         right: 0;
-        background: url('~@/assets/img/icon_change-language.png') center/100% no-repeat;
+        background: url('~/@assets/img/icon_change-language.png') center/100%
+          no-repeat;
       }
     }
     &__options {
