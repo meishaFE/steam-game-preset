@@ -5,7 +5,7 @@ export const ENV = {
   local: /127.0.0.1|192.168|localhost|iampomelo./.test(HOST),
   test: HOST.startsWith('test-'),
   pre: HOST.startsWith('pre-'),
-  prod: HOST.startsWith('steam.'),
+  prod: HOST.startsWith('newton.'),
   iOS: !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
 };
 
