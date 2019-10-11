@@ -32,12 +32,14 @@ const i18n = new VueI18n({
 });
 
 Vue.use(SteamUI);
+
 // init meisha-watch
+// 查看报告地址 test-console.meishakeji.com/pre-console.meishakeji.com
+// TODO: 查看乐享上的文档，自行填充reportURL上报地址
 MeishaWatch.init({
-  isReport: ENV.prod, // 是否向后端提交MeishaWatch收集信息，默认为true，可自行检测当前环境，在开发、测试、预发布环境关闭，如：isReport:
-  reportURL: '//pre-monitor.meishakeji.com/v1/fex/post_log', // 向后端提交MeishaWatch收集信息的URL(必填，否则无法提交)
-  projectId: 'steam', // 日志系统设置的项目英文名（必填，否则无法提交）
-  partitionId: 'biggame' // 日志系统设置的分区英文名称（必填，否则无法提交)
+  isReport: !ENV.local,
+  projectId: 'biggame',
+  reportURL: ENV.prod || ENV.pre ? '内部正式上报地址' : '内部测试环境上报地址'
 });
 
 Vue.use(MeishaWatch.useVue());
